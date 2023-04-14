@@ -11,24 +11,34 @@
     <header>
       <nav class="nav-desktop">
         <ul class="nav-link-wrap flex justify-around">
-          <li class="nav-item nobullets"><a>Home</a></li>
-          <li class="nav-item nobullets"><a>Menus</a></li>
-          <li class="nav-item nobullets"><a>Event Calendar</a></li>
-          <li class="nav-item nobullets"><a>Music Booking</a></li>
-          <li class="nav-item nobullets"><a>Find Us!</a></li>
+          <li class="nav-item no-bullets">
+            <a class="nav-link no-decoration" href="##about">Home</a>
+          </li>
+          <li class="nav-item no-bullets">
+            <a class="nav-link no-decoration" href="#menus">Menus</a>
+          </li>
+          <li class="nav-item no-bullets">
+            <a class="nav-link no-decoration" href="#calendar"
+              >Event Calendar</a
+            >
+          </li>
+          <li class="nav-item no-bullets">
+            <a class="nav-link no-decoration" href="#booking">Music Booking</a>
+          </li>
+          <li class="nav-item no-bullets">
+            <a class="nav-link no-decoration" href="#address">Find Us!</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="flex flex-col align-center justify-start">
-        <div class="logo-wrap">
-          <img id="logo-main" src="./the806logo.svg" alt="the 806 logo" />
+      <section class="flex flex-col align-center justify-start" id="home">
+        <div class="flex justify-center logo-wrap">
+          <img id="logo-main" src="./the806logo.webp" alt="the 806 logo" />
         </div>
-        <p>splash image</p>
-
         <button id="giftcard-btn" class="btn-test">Order Giftcards!</button>
       </section>
-      <section class="flex align-center justify-between bg-blue">
+      <section class="flex align-center justify-between bg-blue" id="about">
         <div>
           <h3>About</h3>
           <h2>The 806 Coffee + Lounge</h2>
@@ -41,7 +51,7 @@
         </div>
         <div class="img-standin"></div>
       </section>
-      <section class="flex align-center justify-between bg-blue">
+      <section class="flex align-center justify-between bg-blue" id="menus">
         <div class="img-standin"></div>
         <div>
           <h3>DAILY</h3>
@@ -54,7 +64,7 @@
           </p>
         </div>
       </section>
-      <section class="flex align-center justify-between bg-blue">
+      <section class="flex align-center justify-between bg-blue" id="calendar">
         <div>
           <h3>MUSIC + ART</h3>
           <h2>EVENTS</h2>
@@ -71,13 +81,13 @@
         <div class="img-standin"></div>
       </section>
       <section><p>parallax image thing</p></section>
-      <section class="flex align-center justify-between bg-blue">
+      <section class="flex align-center justify-between bg-blue" id="booking">
         <p>music booking</p>
         <form>
           <button>submit</button>
         </form>
       </section>
-      <section class="flex align-center justify-between bg-blue">
+      <section class="flex align-center justify-between bg-blue" id="address">
         <p>find us</p>
         <p>embed google map</p>
       </section>
