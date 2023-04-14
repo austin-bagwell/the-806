@@ -13,12 +13,13 @@ html {
 /* font */
 /* normal normal 700 15px/1.4em verdana,geneva,sans-serif; */
 :root {
-  --main-bg-color: black;
-  --main-font-color: white;
-  --secondary-font-color: rgb(227, 227, 227);
-  --main-blue-color: rgb(0, 7, 72);
+  --primary-bg-color: black;
+  --primary-blue-color: rgb(0, 7, 72);
   --secondary-blue-color: rgb(0, 22, 216);
-  --main-grey-color: rgb(70, 71, 71);
+  --hover--blue-color: rgb(0, 83, 216);
+  --primary-grey-color: rgb(70, 71, 71);
+  --primary-font-color: white;
+  --secondary-font-color: rgb(227, 227, 227);
   --font-weight-bold: 600;
 }
 
@@ -26,14 +27,18 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: var(--main-bg-color);
-  color: var(--main-font-color);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-font-color);
 }
 
 section {
   margin: auto;
   max-width: 70%;
   min-height: 500px;
+}
+
+button {
+  cursor: pointer;
 }
 
 .btn-test {
@@ -62,6 +67,10 @@ section {
   justify-content: space-around;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -71,10 +80,12 @@ section {
 }
 
 .bg-blue {
-  background-color: var(--main-blue-color);
+  background-color: var(--primary-blue-color);
 }
-
+/* || SITE SPECIFIC */
+/*  */
 /* || NAVIGATION */
+/*  */
 .nav-desktop {
   padding: 2.5rem;
 }
@@ -94,4 +105,23 @@ section {
   cursor: pointer;
   font-weight: var(--font-weight-bold);
   color: var(--secondary-font-color);
+}
+
+#giftcard-btn {
+  min-width: 14rem;
+  min-height: 2.5rem;
+  border: none;
+  border-radius: 25px;
+  color: var(--primary-font-color);
+  background-color: var(--secondary-blue-color);
+}
+
+#giftcard-btn:hover {
+  background-color: var(--hover--blue-color);
+}
+
+.img-standin {
+  min-width: 450px;
+  min-height: 400px;
+  background-color: var(--primary-grey-color);
 }
