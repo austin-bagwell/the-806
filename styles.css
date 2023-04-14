@@ -84,6 +84,13 @@ button {
 }
 /* || SITE SPECIFIC */
 /*  */
+
+/* LOGO */
+.logo-wrap {
+  max-width: 200px;
+  max-height: auto;
+}
+
 /* || NAVIGATION */
 /*  */
 .nav-desktop {
