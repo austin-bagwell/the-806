@@ -32,12 +32,21 @@ body {
 
 section {
   margin: auto;
-  max-width: 70%;
+  max-width: 72%;
   min-height: 500px;
 }
 
 section:first-of-type {
   padding-bottom: 200px;
+}
+
+section:not(:first-of-type) {
+  padding-top: 10rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }
 
 button {
@@ -86,6 +95,8 @@ button {
 .bg-blue {
   background-color: var(--primary-blue-color);
 }
+
+/*  */
 /* || SITE SPECIFIC */
 /*  */
 
@@ -140,10 +151,28 @@ button {
   background-color: var(--hover--blue-color);
 }
 
+/* IMAGES */
 .img-standin {
   min-width: 450px;
   min-height: 400px;
   background-color: var(--primary-grey-color);
+}
+
+.img-wrap {
+  min-width: 50%;
+  min-height: auto;
+}
+
+.img-offset-left {
+  position: relative;
+  top: 50px;
+  right: 80px;
+}
+
+.img-offset-right {
+  position: relative;
+  top: -50px;
+  right: -80px;
 }
 
 #logo-main {
