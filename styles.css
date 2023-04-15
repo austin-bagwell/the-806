@@ -47,6 +47,8 @@ section:not(:first-of-type) {
 img {
   width: 100%;
   height: 100%;
+  max-height: 900px;
+  max-width: auto;
 }
 
 button {
@@ -62,6 +64,14 @@ button {
 
 .no-decoration {
   text-decoration: none;
+}
+
+.letter-spacing-wide {
+  letter-spacing: 0.25rem;
+}
+
+.font-size-lg {
+  font-size: 24px;
 }
 
 .flex {
@@ -135,6 +145,12 @@ button {
   border-bottom: 1px solid var(--hover--blue-color);
 }
 
+/* HEADINGS */
+
+.section-heading {
+  color: red;
+}
+
 /* BUTTONS */
 #giftcard-btn {
   min-width: 16rem;
@@ -152,20 +168,17 @@ button {
 }
 
 /* IMAGES */
-.img-standin {
-  min-width: 450px;
-  min-height: 400px;
-  background-color: var(--primary-grey-color);
-}
 
 .img-wrap {
-  min-width: 50%;
   min-height: auto;
+  min-width: 50%;
+  max-height: 900px;
+  max-width: auto;
 }
 
 .img-offset-left {
   position: relative;
-  top: 50px;
+  top: -50px;
   right: 80px;
 }
 
