@@ -57,6 +57,30 @@ button {
   cursor: pointer;
 }
 
+input,
+textarea {
+  min-width: 300px;
+  margin-bottom: 1rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+input {
+  min-height: 1.5rem;
+}
+
+textarea {
+  min-height: 4rem;
+}
+
+input::placeholder {
+  color: var(--primary-font-color);
+}
+
+textarea::placeholder {
+  color: var(--primary-font-color);
+}
+
 /* || UTILITY */
 .no-bullets {
   list-style: none;
@@ -78,6 +102,14 @@ button {
 
 .font-size-lg {
   font-size: 24px;
+}
+
+.font-color-white {
+  color: var(--secondary-font-color);
+}
+
+.max-w-50 {
+  max-width: 50%;
 }
 
 .flex {
@@ -124,6 +156,10 @@ button {
   right: -60px;
 }
 
+mb-1rem {
+  margin-bottom: 1rem;
+}
+
 .pb-1rem {
   padding-bottom: 1rem;
 }
@@ -136,15 +172,15 @@ button {
   background-color: var(--primary-blue-color);
 }
 
+.bg-grey {
+  background-color: var(--primary-grey-color);
+}
+
 /*  */
 /* || SITE SPECIFIC */
 /*  */
 
 /* LOGO */
-/* .logo-wrap {
-  max-width: 200px;
-  max-height: auto;
-} */
 
 /* || NAVIGATION */
 /*  */

@@ -134,7 +134,7 @@
           <div class="pb-2rem">
             <h2 class="font-size-md letter-spacing-wide">MUSIC BOOKING</h2>
           </div>
-          <div>
+          <div class="max-w-50">
             <h3>We are currently ONLY booking Thursday through Saturday</h3>
             <p>
               ** Please note that we specialize in just about any genre, aside
@@ -142,9 +142,33 @@
             </p>
           </div>
         </div>
-        <form>
-          <button>submit</button>
-        </form>
+        <div class="max-w-50 flex justify-start">
+          <form class="flex flex-col justify-around">
+            <input
+              type="text"
+              placeholder="Band Name*"
+              class="bg-grey font-color-white"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email*"
+              class="bg-grey font-color-white"
+              required
+            />
+            <input
+              type="date"
+              placeholder="Date requested"
+              class="bg-grey font-color-white"
+              required
+            />
+            <textarea
+              placeholder="Message. Music links."
+              class="bg-grey font-color-white"
+            ></textarea>
+            <button>submit</button>
+          </form>
+        </div>
       </section>
       <section class="flex align-center justify-center bg-blue" id="address">
         <div class="flex justify-center align-center">
