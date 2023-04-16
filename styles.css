@@ -104,6 +104,10 @@ textarea::placeholder {
   font-size: 24px;
 }
 
+.font-bold-md {
+  font-weight: 600;
+}
+
 .font-color-white {
   color: var(--secondary-font-color);
 }
@@ -259,9 +263,23 @@ mb-1rem {
   margin-top: 3rem;
 }
 
+/* TODO */
+/* rename, add actual parallax stuff */
 #parallax-img-section {
   margin: 0;
   padding: 0;
   min-width: 100vw;
   min-height: auto;
+}
+
+/* TODO */
+/* how style iframe? */
+.map-iframe-wrap {
+  width: 65vw;
+  height: auto;
+}
+
+.map-iframe {
+  width: 65vw;
+  height: auto;
 }
