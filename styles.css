@@ -278,10 +278,9 @@ mb-1rem {
 /* how style iframe? */
 .map-iframe-wrap {
   width: 65vw;
-  height: auto;
+  height: 600px;
 }
 
 .map-iframe {
   width: 65vw;
-  height: auto;
 }
