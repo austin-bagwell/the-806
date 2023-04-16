@@ -40,7 +40,6 @@
       </section>
       <section class="flex align-center justify-between bg-blue" id="about">
         <div>
-          <!-- section title div? -->
           <div class="pb-2rem">
             <h2
               class="relative offset-right-lg font-size-md letter-spacing-wide"
@@ -51,7 +50,6 @@
               The 806 Coffee + Lounge
             </h3>
           </div>
-          <!-- section copywriting? -->
           <div>
             <p>
               Established in 2007 in the Historic Route 66 District, we offer
@@ -66,7 +64,7 @@
           <img
             src="./806_sign.JPG"
             alt="looking into the 806 at night"
-            class="img-offset-right"
+            class="relative offset-right-xl"
           />
         </div>
       </section>
@@ -75,7 +73,7 @@
           <img
             src="./806_door_1.webp"
             alt="door of the 806 coffee lounge"
-            class="img-offset-left"
+            class="relative offset-left-xl"
           />
         </div>
         <div>
@@ -134,7 +132,7 @@
           <img
             src="./806_door_2.webp"
             alt="looking into the 806 at night"
-            class="img-offset-right"
+            class="relative offset-right-xl"
           />
         </div>
       </section>
@@ -154,7 +152,7 @@
             </p>
           </div>
         </div>
-        <div class="max-w-50 flex justify-start">
+        <div id="booking-form-wrap" class="max-w-50 flex justify-start">
           <form class="flex flex-col justify-around">
             <input
               type="text"
@@ -170,13 +168,16 @@
             />
             <input
               type="date"
-              placeholder="Date requested"
+              placeholder="Request date: "
               class="bg-grey font-color-white"
               required
             />
             <textarea
               placeholder="Message. Music links."
               class="bg-grey font-color-white"
+              rows="5"
+              cols="33"
+              maxlength="500"
             ></textarea>
             <button>submit</button>
           </form>

@@ -53,8 +53,24 @@ img {
   max-width: auto;
 }
 
+/* || FORM + INPUT */
+
+form > button {
+  align-self: center;
+  min-width: 65%;
+  min-height: 2.25rem;
+  border: none;
+  font-size: 16px;
+}
+
 button {
   cursor: pointer;
+  border: none;
+  background-color: var(--secondary-blue-color);
+  color: var(--primary-font-color);
+}
+button:hover {
+  background-color: var(--hover--blue-color);
 }
 
 input,
@@ -79,6 +95,16 @@ input::placeholder {
 
 textarea::placeholder {
   color: var(--primary-font-color);
+}
+/* https://stackoverflow.com/questions/18146350/ */
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: var(--primary-font-color);
+  margin-right: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
 }
 
 /* || UTILITY */
@@ -164,6 +190,26 @@ textarea::placeholder {
   right: -60px;
 }
 
+.offset-right-xl {
+  right: -150px;
+}
+
+.offset-left-sm {
+  left: -20px;
+}
+
+.offset-left-md {
+  left: -40px;
+}
+
+.offset-left-lg {
+  left: -60px;
+}
+
+.offset-left-xl {
+  left: -150px;
+}
+
 mb-1rem {
   margin-bottom: 1rem;
 }
@@ -187,8 +233,6 @@ mb-1rem {
 /*  */
 /* || SITE SPECIFIC */
 /*  */
-
-/* LOGO */
 
 /* || NAVIGATION */
 /*  */
@@ -219,33 +263,21 @@ mb-1rem {
   border-bottom: 1px solid var(--hover--blue-color);
 }
 
-/* HEADINGS */
-
-.section-heading {
-  color: red;
-}
-
 /* BUTTONS */
 #giftcard-btn {
   min-width: 16rem;
   min-height: 3.5rem;
   margin-top: 3rem;
-  border: none;
   border-radius: 25px;
   font-size: 24px;
-  color: var(--primary-font-color);
-  background-color: var(--secondary-blue-color);
-}
-
-#giftcard-btn:hover {
-  background-color: var(--hover--blue-color);
 }
 
 /* IMAGES */
 
 .img-wrap {
   min-height: auto;
-  min-width: 500px;
+  min-width: 400px;
+  max-width: 400px;
 }
 
 .img-offset-left {
@@ -283,4 +315,9 @@ mb-1rem {
 
 .map-iframe {
   width: 65vw;
+}
+
+/* || FORM */
+#booking-form-wrap {
+  padding-right: 5rem;
 }
