@@ -43,7 +43,7 @@ section:first-of-type {
 }
 
 section:not(:first-of-type) {
-  padding-top: 10rem;
+  padding-top: 8rem;
 }
 
 img {
@@ -54,7 +54,6 @@ img {
 }
 
 /* || FORM + INPUT */
-
 form > button {
   align-self: center;
   min-width: 65%;
@@ -87,6 +86,7 @@ input {
 
 textarea {
   min-height: 4rem;
+  resize: none;
 }
 
 input::placeholder {
@@ -308,13 +308,18 @@ mb-1rem {
 
 /* TODO */
 /* how style iframe? */
+/* that padding-left is garbage */
 .map-iframe-wrap {
+  margin: auto;
   width: 65vw;
   height: 600px;
+  padding-left: 8rem;
 }
 
 .map-iframe {
+  margin: auto;
   width: 65vw;
+  border: none;
 }
 
 /* || FORM */
