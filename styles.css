@@ -246,6 +246,16 @@ mb-1rem {
 /* || SITE SPECIFIC */
 /*  */
 
+/* COPYWRITING */
+
+.section-heading {
+  font-size: 48px;
+}
+
+.main-heading {
+  font-size: 100px;
+}
+
 /* || NAVIGATION */
 /*  */
 .nav-desktop {
