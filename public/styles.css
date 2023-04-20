@@ -321,11 +321,22 @@ mb-1rem {
 
 /* TODO */
 /* rename, add actual parallax stuff */
+/* || PARALLAX */
+
+.parallax {
+  background-image: url("./assets/images/806_underlay.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 630px;
+}
+
 #parallax-img-section {
   margin: 0;
   padding: 0;
+  min-height: unset;
   min-width: 100vw;
-  min-height: auto;
 }
 
 /* TODO */
