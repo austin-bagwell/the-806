@@ -218,7 +218,7 @@ input[type="date"]:valid:before {
   left: -150px;
 }
 
-mb-1rem {
+.mb-1rem {
   margin-bottom: 1rem;
 }
 
