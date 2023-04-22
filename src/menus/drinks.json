@@ -169,13 +169,29 @@
       }
     ],
     "teas": {
-      "hot tea": {
-        "description": "loose leaf. see below. ask for steeping times!"
-      },
-      "iced tea": {
-        "description": "20oz. ask for today’s features!"
-      },
-      "tea selections": {
+      "drinkOptions": [
+        {
+          "name": "hot tea",
+          "description": "loose leaf. see below. ask for steeping times!"
+        },
+        {
+          "name": "iced tea",
+          "description": "20oz. ask for today’s features!"
+        },
+        {
+          "name": "chai latte",
+          "description": "vanilla or spiced. dairy free! **our chais are made with a tapioca-based, non-dairy cream"
+        },
+        {
+          "name": "iced thai tea",
+          "description": "sweet, spiced, + splash of coconut or half-n-half?"
+        },
+        {
+          "name": "tea latte",
+          "description": "your choice of tea with steamed milk add a flavor?"
+        }
+      ],
+      "looseLeafTeas": {
         "black": [
           "english breakfast",
           "irish breakfast",
@@ -212,20 +228,11 @@
           "sunshine medley",
           "sundown herbal"
         ]
-      },
-      "chai latte": {
-        "description": "vanilla or spiced. dairy free! **our chais are made with a tapioca-based, non-dairy cream"
-      },
-      "iced thai tea": {
-        "description": "sweet, spiced, + splash of coconut or half-n-half?"
-      },
-      "tea latte": {
-        "description": "your choice of tea with steamed milk add a flavor?"
       }
     },
     "flavors": {
       "organic": ["vanilla", "hazelnut", "caramel", "rasberry"],
-      "all-natural": [
+      "allNatural": [
         "irish cream",
         "toffee nut",
         "almond",
@@ -238,7 +245,7 @@
         "green mint",
         "strawberry"
       ],
-      "sugar-free": ["vanilla", "caramel", "hazelnut"]
+      "sugarFree": ["vanilla", "caramel", "hazelnut"]
     }
   }
 }
