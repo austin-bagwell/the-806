@@ -1,0 +1,36 @@
+{
+  "drinks": {
+    "coffees": [
+      {
+        "name": "string",
+        "description": "string"
+      }
+    ],
+    "espressos": [
+      {
+        "name": "string",
+        "description": "string"
+      }
+    ]
+  },
+  "foodies": {
+    "pizzas": [
+      {
+        "name": "string",
+        "description": "string"
+      }
+    ],
+    "mexi": [
+      {
+        "name": "string",
+        "description": "string"
+      }
+    ]
+  },
+  "flavors": {
+    "organic": ["flavor", "flavor"]
+  },
+  "looseLeafTea": {
+    "black": ["tea", "tea"]
+  }
+}
