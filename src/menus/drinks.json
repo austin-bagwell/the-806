@@ -168,62 +168,77 @@
         "description": "whole, 2%, skim.  [non-dairy + .60]"
       }
     ],
-    "teas": [
-      {
-        "hot tea": {
-          "description": "loose leaf. see below. ask for steeping times!"
-        },
-        "iced tea": {
-          "description": "20oz. ask for today’s features!"
-        },
-        "tea selections": {
-          "black": [
-            "english breakfast",
-            "irish breakfast",
-            "earl grey",
-            "mango black",
-            "russian caravan",
-            "imperial gold oolong",
-            "vanilla black",
-            "blackberry",
-            "lychee congou",
-            "rose congou"
-          ],
-          "green": [
-            "gunpowder green",
-            "chun mee",
-            "japanese sencha",
-            "paradise green",
-            "china jasmine",
-            "genmaicha",
-            "moroccan mint",
-            "pomegranate green",
-            "sweet pear green",
-            "passionfruit kiwi",
-            "river mist"
-          ],
-          "red": ["rooibos", "african sunset", "mandarin rooibos"],
-          "herbal": [
-            "egyptian chamomile",
-            "lemon ginger",
-            "peppermint leaf",
-            "bruja blend [hibiscus]",
-            "tulsi ayurvedic detox",
-            "yerba maté",
-            "sunshine medley",
-            "sundown herbal"
-          ]
-        },
-        "chai latte": {
-          "description": "vanilla or spiced. dairy free! **our chais are made with a tapioca-based, non-dairy cream"
-        },
-        "iced thai tea": {
-          "description": "sweet, spiced, + splash of coconut or half-n-half?"
-        },
-        "tea latte": {
-          "description": "your choice of tea with steamed milk add a flavor?"
-        }
+    "teas": {
+      "hot tea": {
+        "description": "loose leaf. see below. ask for steeping times!"
+      },
+      "iced tea": {
+        "description": "20oz. ask for today’s features!"
+      },
+      "tea selections": {
+        "black": [
+          "english breakfast",
+          "irish breakfast",
+          "earl grey",
+          "mango black",
+          "russian caravan",
+          "imperial gold oolong",
+          "vanilla black",
+          "blackberry",
+          "lychee congou",
+          "rose congou"
+        ],
+        "green": [
+          "gunpowder green",
+          "chun mee",
+          "japanese sencha",
+          "paradise green",
+          "china jasmine",
+          "genmaicha",
+          "moroccan mint",
+          "pomegranate green",
+          "sweet pear green",
+          "passionfruit kiwi",
+          "river mist"
+        ],
+        "red": ["rooibos", "african sunset", "mandarin rooibos"],
+        "herbal": [
+          "egyptian chamomile",
+          "lemon ginger",
+          "peppermint leaf",
+          "bruja blend [hibiscus]",
+          "tulsi ayurvedic detox",
+          "yerba maté",
+          "sunshine medley",
+          "sundown herbal"
+        ]
+      },
+      "chai latte": {
+        "description": "vanilla or spiced. dairy free! **our chais are made with a tapioca-based, non-dairy cream"
+      },
+      "iced thai tea": {
+        "description": "sweet, spiced, + splash of coconut or half-n-half?"
+      },
+      "tea latte": {
+        "description": "your choice of tea with steamed milk add a flavor?"
       }
-    ]
+    },
+    "flavors": {
+      "organic": ["vanilla", "hazelnut", "caramel", "rasberry"],
+      "all-natural": [
+        "irish cream",
+        "toffee nut",
+        "almond",
+        "cherry",
+        "pomegranate",
+        "blackberry",
+        "mandarin orange",
+        "kiwi",
+        "peach",
+        "green mint",
+        "strawberry"
+      ],
+      "sugar-free": ["vanilla", "caramel", "hazelnut"]
+    }
   }
 }
