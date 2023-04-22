@@ -16,6 +16,8 @@ getMenu("drinks").then((data) =>
   main.insertAdjacentElement("beforeend", renderMenuSectionSkeleton(data))
 );
 
+// TODO
+// use document API instead of template literals... at least I think that's smart?
 function renderListItems(menu, category) {
   const items = menu.categories[`${category}`];
   const html = items.map((item) => {
