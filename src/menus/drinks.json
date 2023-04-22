@@ -1,0 +1,229 @@
+{
+  "category": {
+    "coffees": [
+      {
+        "name": "drip coffee",
+        "description": "House Brew, Today's Feature"
+      },
+      {
+        "name": "cafe au lait",
+        "description": "half coffee, half steamed milk"
+      },
+      {
+        "name": "tweaker",
+        "description": "coffee + espresso"
+      },
+      {
+        "name": "iced coffee",
+        "description": "20oz. House Brew or Today's Feature"
+      },
+      {
+        "name": "cold brew",
+        "description": "20oz. our special brew, 12 hours in the making!"
+      },
+      {
+        "name": "french press",
+        "description": "16oz. your choice of freshly ground coffee"
+      },
+      {
+        "name": "am.AeroPress",
+        "description": "12oz. your choice coffee, americano-style!"
+      },
+      {
+        "name": "the pour over",
+        "description": "16oz. your choice of coffee [can take ~5 mins!]"
+      }
+    ],
+    "espresso": [
+      {
+        "name": "espresso",
+        "description": "straight, no chaser"
+      },
+      {
+        "name": "espresso macchiato",
+        "description": "espresso + a dollop of milk froth"
+      },
+      {
+        "name": "espresso con panna",
+        "description": "espresso + whipped cream"
+      },
+      {
+        "name": "con leche",
+        "description": "8oz. espresso, steamed milk, sans froth"
+      },
+      {
+        "name": "cafe americano",
+        "description": "espresso + hot water. coffee, euro-style"
+      },
+      {
+        "name": "cafe latte",
+        "description": "espresso + steamed milk, light froth -add a flavor?"
+      },
+      {
+        "name": "cappuccino",
+        "description": "espresso + steamed milk, mucho froth"
+      },
+      {
+        "name": "cafe mocha",
+        "description": "regular or white chocolate. whipped cream?"
+      },
+      {
+        "name": "breve latte",
+        "description": "espresso + steamed half-n-half -add a flavor?"
+      },
+      {
+        "name": "non-dairy latte",
+        "description": "soy, coconut, rice, oat, hemp -add a flavor?"
+      },
+      {
+        "name": "iced thai coffee",
+        "description": "sweet, spiced, and strong, + splash of coconut or half-n-half?"
+      }
+    ],
+    "evolutions": [
+      {
+        "name": "007",
+        "description": "espresso + ice. shaken, not stirred, not iced. add flavor + milk if you wish."
+      },
+      {
+        "name": "starfucker",
+        "description": "aka bigbucks macchiato. with our own twist, of course"
+      },
+      {
+        "name": "honey-nut latte",
+        "description": "nutty and sweet! pretty self-descriptive, no?"
+      },
+      {
+        "name": "pothead",
+        "description": "20oz, iced. our rich, spiced blend of espresso, half-n-half, hemp milk, and other top secret flavors. [16oz hot]"
+      },
+      {
+        "name": "black mamba",
+        "description": "20oz, iced. think liquid espresso brownie. STRONG [16oz hot]"
+      },
+      {
+        "name": "mad hatter",
+        "description": "20oz, iced only. iced thai tea + espresso + splash of…?"
+      },
+      {
+        "name": "spyder",
+        "description": "our own spiced chai / apple cider concoction + whipped cream?"
+      },
+      {
+        "name": "the k.a.c",
+        "description": "20oz, iced. chai, espresso, your choice soy or half-n-half, Kenneth’s secret sauce + whipped cream & cinnamon [16oz hot]"
+      },
+      {
+        "name": "schnozzberry",
+        "description": "20oz. fizzy & energizing. tastes like schnozzberries!"
+      },
+      {
+        "name": "oh dream",
+        "description": "20oz, iced. our own dreamcicle-y creation"
+      },
+      {
+        "name": "witch doctor",
+        "description": "voodoo tea magic to make you feel mo’ betta! hot only"
+      },
+      {
+        "name": "ju.ju",
+        "description": "rich, chocolatey espresso goodness! black, white, and spicy all over. double only."
+      },
+      {
+        "name": "SinnaBum",
+        "description": "iced. formerly ‘whorlatta.’ oat milk, a lil caramel, a lil cinnamon.. a lot tasty!"
+      },
+      {
+        "name": "white rabbit",
+        "description": "white chocolate, toffee, half-n-half.. so rich, so good. whip + caramel"
+      }
+    ],
+    "etcetera": [
+      {
+        "name": "hot cocoa",
+        "description": "regular or white chocolate. whipped cream?"
+      },
+      {
+        "name": "steamer",
+        "description": "steamed milk with your choice flavor. whip?"
+      },
+      {
+        "name": "italian soda",
+        "description": "soda + flavor... no cream"
+      },
+      {
+        "name": "french soda",
+        "description": "soda + flavor... with cream"
+      },
+      {
+        "name": "energy drink",
+        "description": "all-natural, berry-vicious, and pretty self-explanatory!"
+      },
+      {
+        "name": "juice",
+        "description": "orange, mango-orange, pineapple-orange, apple"
+      },
+      {
+        "name": "milk",
+        "description": "whole, 2%, skim.  [non-dairy + .60]"
+      }
+    ],
+    "teas": [
+      {
+        "hot tea": {
+          "description": "loose leaf. see below. ask for steeping times!"
+        },
+        "iced tea": {
+          "description": "20oz. ask for today’s features!"
+        },
+        "tea selections": {
+          "black": [
+            "english breakfast",
+            "irish breakfast",
+            "earl grey",
+            "mango black",
+            "russian caravan",
+            "imperial gold oolong",
+            "vanilla black",
+            "blackberry",
+            "lychee congou",
+            "rose congou"
+          ],
+          "green": [
+            "gunpowder green",
+            "chun mee",
+            "japanese sencha",
+            "paradise green",
+            "china jasmine",
+            "genmaicha",
+            "moroccan mint",
+            "pomegranate green",
+            "sweet pear green",
+            "passionfruit kiwi",
+            "river mist"
+          ],
+          "red": ["rooibos", "african sunset", "mandarin rooibos"],
+          "herbal": [
+            "egyptian chamomile",
+            "lemon ginger",
+            "peppermint leaf",
+            "bruja blend [hibiscus]",
+            "tulsi ayurvedic detox",
+            "yerba maté",
+            "sunshine medley",
+            "sundown herbal"
+          ]
+        },
+        "chai latte": {
+          "description": "vanilla or spiced. dairy free! **our chais are made with a tapioca-based, non-dairy cream"
+        },
+        "iced thai tea": {
+          "description": "sweet, spiced, + splash of coconut or half-n-half?"
+        },
+        "tea latte": {
+          "description": "your choice of tea with steamed milk add a flavor?"
+        }
+      }
+    ]
+  }
+}
