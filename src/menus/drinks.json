@@ -1,5 +1,5 @@
 {
-  "category": {
+  "categories": {
     "coffees": [
       {
         "name": "drip coffee",
@@ -169,7 +169,7 @@
       }
     ],
     "teas": {
-      "drinkOptions": [
+      "teaDrinks": [
         {
           "name": "hot tea",
           "description": "loose leaf. see below. ask for steeping times!"

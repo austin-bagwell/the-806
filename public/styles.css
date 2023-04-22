@@ -122,10 +122,6 @@ input[type="date"]:valid:before {
   text-decoration: none;
 }
 
-/* .no-wrap {
-  word-break: break-all;
-} */
-
 .letter-spacing-wide {
   letter-spacing: 0.25rem;
 }
@@ -218,6 +214,10 @@ input[type="date"]:valid:before {
   left: -150px;
 }
 
+.margin-auto {
+  margin: auto;
+}
+
 .mb-1rem {
   margin-bottom: 1rem;
 }
@@ -232,6 +232,18 @@ input[type="date"]:valid:before {
 
 .pb-4rem {
   padding-bottom: 4rem;
+}
+
+.pr-1rem {
+  padding-right: 1rem;
+}
+
+.pr-2rem {
+  padding-right: 2rem;
+}
+
+.pr-4rem {
+  padding-right: 4rem;
 }
 
 .bg-blue {
