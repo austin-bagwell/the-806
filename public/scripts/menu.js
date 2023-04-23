@@ -1,12 +1,25 @@
-const promiseTest = document.querySelector("#promise-test");
-
 const main = document.querySelector(".main");
 
-async function getMenu(menu) {
+// async function getMenu(menu) {
+//   try {
+//     const response = await fetch(`/${menu}`);
+//     const data = await response.json();
+//     // this might be bad? not sure
+//     return Promise.resolve(data);
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
+
+// TODO
+// this should be my actual fetch()
+async function getMenu() {
   try {
-    const response = await fetch(`/${menu}`);
+    const response = await fetch("/api/menu/");
     const data = await response.json();
-    return Promise.resolve(data);
+    console.log("getting full menu...");
+    console.log(data);
+    return data;
   } catch (err) {
     console.log(err);
   }
@@ -18,8 +31,10 @@ getMenu("drinks").then((data) =>
 
 // TODO
 // use document API instead of template literals... at least I think that's smart?
-function renderListItems(menu, category) {
-  const items = menu.categories[`${category}`];
+// FIXME
+// onlyl pulling drinks at the moment
+function renderCategoryListItems(menu, category) {
+  const items = menu.drinks.categories[`${category}`];
   const html = items.map((item) => {
     return `<li class="no-bullets">
         <span class="font-bold-md">${item.name}... </span>
@@ -39,11 +54,11 @@ function renderMenuSectionSkeleton(menu) {
   const list = document.createElement("ul");
 
   const categories = menu.categories;
-  console.log(categories);
+  // console.log(categories);
   const category = "coffees";
 
   heading.innerText = "Coffees";
-  const menuItems = renderListItems(menu, category);
+  const menuItems = renderCategoryListItems(menu, category);
   list.insertAdjacentHTML("beforeend", menuItems);
 
   section.insertAdjacentElement("beforeend", heading);
