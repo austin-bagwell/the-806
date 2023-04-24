@@ -1,33 +1,25 @@
 const main = document.querySelector(".main");
 
-// async function getMenu(menu) {
-//   try {
-//     const response = await fetch(`/${menu}`);
-//     const data = await response.json();
-//     // this might be bad? not sure
-//     return Promise.resolve(data);
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
-
-// TODO
-// this should be my actual fetch()
 async function getMenu() {
   try {
     const response = await fetch("/api/menu/");
-    const data = await response.json();
-    console.log("getting full menu...");
-    console.log(data);
-    return data;
+
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    } else {
+      throw new Error("something went wrong. Try refreshing the page?");
+    }
   } catch (err) {
-    console.log(err);
+    handleError(err);
   }
 }
 
-getMenu("drinks").then((data) =>
-  main.insertAdjacentElement("beforeend", renderMenuSectionSkeleton(data))
-);
+getMenu()
+  .then((data) =>
+    main.insertAdjacentElement("beforeend", renderMenuSectionSkeleton(data))
+  )
+  .catch((err) => handleError(err));
 
 // TODO
 // use document API instead of template literals... at least I think that's smart?
@@ -80,3 +72,10 @@ function renderMenuSectionSkeleton(menu) {
 
 
 */
+
+// may need multiple error handlers? not totally sure
+function handleError(err) {
+  const p = document.createElement("p");
+  p.innerText = err;
+  main.insertAdjacentElement("beforeend", p);
+}
