@@ -1,6 +1,4 @@
 const main = document.querySelector(".main");
-const drinks = document.querySelector("#drinks");
-const foodies = document.querySelector("#foodies");
 const mainMenu = document.querySelector("#main-menu");
 
 const drinkSectionTitles = [
