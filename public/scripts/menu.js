@@ -1,4 +1,8 @@
 const main = document.querySelector(".main");
+const drinks = document.querySelector("#drinks");
+const foodies = document.querySelector("#foodies");
+const mainMenu = document.querySelector("#main-menu");
+
 const drinkSectionTitles = [
   "Coffees",
   "Espresso",
@@ -14,6 +18,25 @@ const foodieSectionTitle = [
   "Sandwiches",
   "Breakfasty",
 ];
+
+mainMenu.addEventListener("click", (e) => {
+  const subMenu = document.querySelector("#sub-menu");
+  const targetName = e.target.innerText;
+  subMenu.innerHTML = "";
+  targetName === "drinks"
+    ? subMenu.insertAdjacentHTML("beforeend", renderSubMenu(drinkSectionTitles))
+    : subMenu.insertAdjacentHTML(
+        "beforeend",
+        renderSubMenu(foodieSectionTitle)
+      );
+});
+
+function renderSubMenu(menu) {
+  const subMenu = document.querySelector("#sub-menu");
+  const targetName = e.target.innerText;
+  const style = `class="pr-1rem"`;
+  return menu.map((item) => `<li ${style} >${item}</li>`).join("");
+}
 
 getMenu()
   .then((data) => renderMenu(data))
@@ -82,8 +105,8 @@ function renderSection(section) {
 }
 
 function renderList(arr) {
-  console.log("renderList array:");
-  console.log(arr);
+  // console.log("renderList array:");
+  // console.log(arr);
   // add handling here -
   // if the thing passed in is an array of objects {name: str, desription: str}
   // then put those into a niceley formated UL w/ 'name' in bold or whatever
