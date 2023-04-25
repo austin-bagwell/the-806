@@ -1,4 +1,23 @@
 const main = document.querySelector(".main");
+const drinkSectionTitles = [
+  "Coffees",
+  "Espresso",
+  "Evolutions",
+  "Teas + Chais",
+  "Etcetera",
+];
+
+const foodieSectionTitle = [
+  "Pizzas",
+  "Vegan",
+  "Mexi",
+  "Sandwiches",
+  "Breakfasty",
+];
+
+getMenu()
+  .then((data) => renderMenu(data))
+  .catch((err) => console.log(err));
 
 async function getMenu() {
   try {
@@ -14,10 +33,6 @@ async function getMenu() {
     handleError(err);
   }
 }
-
-getMenu()
-  .then((data) => renderMenu(data))
-  .catch((err) => handleError(err));
 
 // TODO all of this
 function renderMenu(menuData) {
@@ -80,20 +95,19 @@ function renderList(arr) {
 // use document API instead of template literals... at least I think that's smart?
 // FIXME
 // only pulling drinks at the moment
-function renderCategoryListItems(menu, category) {
-  const items = menu.drinks.categories[`${category}`];
-  const html = items.map((item) => {
-    return `<li class="no-bullets">
-        <span class="font-bold-md">${item.name}... </span>
-        <span>${item.description}</span>
+function renderMenuItem(menuItem, styles) {
+  const { name, description } = menuItem;
+  const html = `<li class="no-bullets">
+        <span class="font-bold-md">${name}... </span>
+        <span>${description}</span>
         </li>`;
-  });
-  return html.join("");
+  return html;
 }
 
 // may need multiple error handlers? not totally sure
 function handleError(err) {
-  const p = document.createElement("p");
-  p.innerText = err;
-  main.insertAdjacentElement("beforeend", p);
+  const message = document.createElement("h3");
+  message.style.textAlign = "center";
+  message.innerText = err;
+  main.insertAdjacentElement("beforeend", message);
 }
