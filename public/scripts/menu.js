@@ -32,8 +32,6 @@ mainMenu.addEventListener("click", (e) => {
 });
 
 function renderSubMenu(menu) {
-  const subMenu = document.querySelector("#sub-menu");
-  const targetName = e.target.innerText;
   const style = `class="pr-1rem"`;
   return menu.map((item) => `<li ${style} >${item}</li>`).join("");
 }
