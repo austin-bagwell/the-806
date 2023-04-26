@@ -21,16 +21,16 @@ const foodieSectionTitle = [
 // TODO refactor
 // menu navigation
 subMenu.insertAdjacentHTML("beforeend", renderSubMenu(drinkSectionTitles));
-subMenu.addEventListener("click", function (e) {
+subMenu.addEventListener("click", (e) => {
   dynamicallyStyleSubMenu(e);
 });
+
 mainMenu.addEventListener("click", (e) => {
   const mainMenuLinks = document.querySelectorAll(".main-menu-link");
-  const target = e.target;
   const targetName = e.target.innerText;
 
   mainMenuLinks.forEach((title) => title.classList.remove("underline"));
-  target.classList.add("underline");
+  e.target.classList.add("underline");
 
   subMenu.innerHTML = "";
   targetName === "drinks"
