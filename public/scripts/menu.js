@@ -1,5 +1,6 @@
 const main = document.querySelector(".main");
 const mainMenu = document.querySelector("#main-menu");
+const subMenu = document.querySelector("#sub-menu");
 
 const drinkSectionTitles = [
   "Coffees",
@@ -17,9 +18,20 @@ const foodieSectionTitle = [
   "Breakfasty",
 ];
 
+// TODO refactor
+// menu navigation
+subMenu.insertAdjacentHTML("beforeend", renderSubMenu(drinkSectionTitles));
+subMenu.addEventListener("click", function (e) {
+  dynamicallyStyleSubMenu(e);
+});
 mainMenu.addEventListener("click", (e) => {
-  const subMenu = document.querySelector("#sub-menu");
+  const mainMenuLinks = document.querySelectorAll(".main-menu-link");
+  const target = e.target;
   const targetName = e.target.innerText;
+
+  mainMenuLinks.forEach((title) => title.classList.remove("underline"));
+  target.classList.add("underline");
+
   subMenu.innerHTML = "";
   targetName === "drinks"
     ? subMenu.insertAdjacentHTML("beforeend", renderSubMenu(drinkSectionTitles))
@@ -29,9 +41,21 @@ mainMenu.addEventListener("click", (e) => {
       );
 });
 
+// TODO actually link to correct menu section
+// will require me to actually render those sections first lol
 function renderSubMenu(menu) {
-  const style = `class="pr-1rem"`;
-  return menu.map((item) => `<li ${style} >${item}</li>`).join("");
+  const style = `class="pr-1rem sub-menu-link"`;
+  return menu
+    .map((item) => `<li ${style} ><a class="sub-menu-link">${item}</a></li>`)
+    .join("");
+}
+
+function dynamicallyStyleSubMenu(e) {
+  const links = document.querySelectorAll(".sub-menu-link");
+  if (e.target.nodeName === "LI" || e.target.nodeName === "A") {
+    links.forEach((link) => link.classList.remove("sub-menu-link-active"));
+    e.target.classList.add("sub-menu-link-active");
+  }
 }
 
 getMenu()

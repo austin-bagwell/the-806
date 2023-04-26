@@ -108,14 +108,14 @@ input[type="date"]:valid:before {
 }
 
 /* || UTILITY */
-.mh-400px {
-  min-height: 400px;
-}
-
 .no-bullets {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .no-decoration {
@@ -140,6 +140,14 @@ input[type="date"]:valid:before {
 
 .font-color-white {
   color: var(--secondary-font-color);
+}
+
+.mh-2rem {
+  min-height: 2rem;
+}
+
+.mh-400px {
+  min-height: 400px;
 }
 
 .max-w-50 {
@@ -295,6 +303,15 @@ input[type="date"]:valid:before {
 .nav-link:hover {
   color: var(--primary-font-color);
   border-bottom: 1px solid var(--hover--blue-color);
+}
+
+.sub-menu-link {
+  color: darkgrey;
+}
+
+.sub-menu-link-active {
+  font-size: 1.25rem;
+  color: blanchedalmond;
 }
 
 /* BUTTONS */
