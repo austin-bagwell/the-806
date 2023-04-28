@@ -50,14 +50,6 @@ function renderSubMenu(menu) {
     .join("");
 }
 
-function dynamicallyStyleSubMenu(e) {
-  const links = document.querySelectorAll(".sub-menu-link");
-  if (e.target.nodeName === "LI" || e.target.nodeName === "A") {
-    links.forEach((link) => link.classList.remove("sub-menu-link-active"));
-    e.target.classList.add("sub-menu-link-active");
-  }
-}
-
 getMenu()
   .then((data) => renderMenu(data))
   .catch((err) => console.log(err));
@@ -78,26 +70,21 @@ async function getMenu() {
 }
 
 // TODO all of this
-function renderMenu(menuData) {
-  // console.log(`full menu data:`);
-  // console.log(menuData);
-  const menuSections = Object.keys(menuData);
+function renderMenu(menus) {
+  const { drinks, foodies } = menus;
 
-  const sectionElements = [];
-  for (let section of menuSections) {
-    // TODO abstract this to another function
-    // everything above renderSection() is just there to make it look
-    // slightly less bad while I sort out actual rendering
-    const sectionElement = document.createElement("section");
-    sectionElement.id = `${section}`;
-    sectionElement.innerText = section;
-    sectionElements.push(sectionElement);
-    const menuSection = menuData[section];
-    // FIXME
-    renderSection(menuSection);
+  const sections = [];
+  for (let menu of [drinks, foodies]) {
+    console.log(menu);
+    sections.push(renderSection(menu));
+    // const section = document.createElement("section");
+    // section.id = `${section}-section`;
+    // section.innerText = section;
+    // sectionElements.push(section);
+    // const menuSection = menuData[section];
   }
   const main = document.querySelector(".main");
-  sectionElements.forEach((section) =>
+  sections.forEach((section) =>
     main.insertAdjacentElement("beforeend", section)
   );
 }
@@ -118,6 +105,7 @@ function renderMenu(menuData) {
 function renderSection(section) {
   // console.log("here's what got passed in as section:");
   // console.log(section);
+
   for (let category of Object.keys(section)) {
     const itemArr = section[category];
     renderList(itemArr);
@@ -134,10 +122,6 @@ function renderList(arr) {
   // then put it into a plain UL, no bold
 }
 
-// TODO
-// use document API instead of template literals... at least I think that's smart?
-// FIXME
-// only pulling drinks at the moment
 function renderMenuItem(menuItem, styles) {
   const { name, description } = menuItem;
   const html = `<li class="no-bullets">
@@ -145,6 +129,14 @@ function renderMenuItem(menuItem, styles) {
         <span>${description}</span>
         </li>`;
   return html;
+}
+
+function dynamicallyStyleSubMenu(e) {
+  const links = document.querySelectorAll(".sub-menu-link");
+  if (e.target.nodeName === "LI" || e.target.nodeName === "A") {
+    links.forEach((link) => link.classList.remove("sub-menu-link-active"));
+    e.target.classList.add("sub-menu-link-active");
+  }
 }
 
 // may need multiple error handlers? not totally sure
