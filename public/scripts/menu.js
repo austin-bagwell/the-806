@@ -41,8 +41,6 @@ mainMenu.addEventListener("click", (e) => {
       );
 });
 
-// TODO actually link to correct menu section
-// will require me to actually render those sections first lol
 function renderSubMenu(menu) {
   const style = `class="pr-1rem sub-menu-link"`;
   return menu
@@ -69,65 +67,54 @@ async function getMenu() {
   }
 }
 
-// TODO all of this
 function renderMenu(menus) {
   const { drinks, foodies } = menus;
 
   const sections = [];
   for (let menu of [drinks, foodies]) {
-    console.log(menu);
     sections.push(renderSection(menu));
-    // const section = document.createElement("section");
-    // section.id = `${section}-section`;
-    // section.innerText = section;
-    // sectionElements.push(section);
-    // const menuSection = menuData[section];
   }
-  const main = document.querySelector(".main");
-  sections.forEach((section) =>
-    main.insertAdjacentElement("beforeend", section)
-  );
-}
-// FIXME
-/**
- *
- * @param {object} section
- * takes a section of the menu in the form of an object where
- * each object property stores an array of menu item objects
- *
- * drinks: {
- *   coffees: [
- *     {name: coffee, description: necessary},
- *      etc...
- *   ]
- * }
- */
-function renderSection(section) {
-  // console.log("here's what got passed in as section:");
-  // console.log(section);
 
+  const main = document.querySelector(".main");
+  sections.forEach((section) => {
+    section.map((category) => {
+      main.insertAdjacentElement("beforeend", category);
+    });
+  });
+}
+
+function renderSection(section) {
+  console.log("here's what got passed in as section:");
+  console.log(section);
+
+  const renderedSections = [];
   for (let category of Object.keys(section)) {
     const itemArr = section[category];
-    renderList(itemArr);
+    const sectionEl = document.createElement("section");
+    sectionEl.id = `${category}-section`;
+    sectionEl.insertAdjacentElement("beforeend", renderItemsList(itemArr));
+    renderedSections.push(sectionEl);
   }
+
+  return renderedSections;
 }
 
-function renderList(arr) {
-  // console.log("renderList array:");
-  // console.log(arr);
-  // add handling here -
-  // if the thing passed in is an array of objects {name: str, desription: str}
-  // then put those into a niceley formated UL w/ 'name' in bold or whatever
-  // else if it's just a plain old array [vanilla, caramel, etc]
-  // then put it into a plain UL, no bold
+function renderItemsList(arr) {
+  const itemsList = document.createElement("ul");
+
+  for (const item of arr) {
+    itemsList.insertAdjacentHTML("beforeend", renderMenuItem(item));
+  }
+
+  return itemsList;
 }
 
-function renderMenuItem(menuItem, styles) {
+function renderMenuItem(menuItem) {
   const { name, description } = menuItem;
   const html = `<li class="no-bullets">
         <span class="font-bold-md">${name}... </span>
         <span>${description}</span>
-        </li>`;
+        </li>`.trim();
   return html;
 }
 
