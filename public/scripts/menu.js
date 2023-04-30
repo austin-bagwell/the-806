@@ -91,7 +91,10 @@ function renderSection(section) {
   for (let category of Object.keys(section)) {
     const itemArr = section[category];
     const sectionEl = document.createElement("section");
+    const sectionTitle = document.createElement("h2");
+    sectionTitle.innerText = category;
     sectionEl.id = `${category}-section`;
+    sectionEl.insertAdjacentElement("beforeend", sectionTitle);
     sectionEl.insertAdjacentElement("beforeend", renderItemsList(itemArr));
     renderedSections.push(sectionEl);
   }
