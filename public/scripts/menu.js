@@ -87,13 +87,13 @@ function renderSection(menu) {
   const categories = [];
   for (let category of Object.keys(menu)) {
     const itemArr = menu[category];
-    const categoryEl = document.createElement("section");
+    const article = document.createElement("article");
     const sectionTitle = document.createElement("h2");
     sectionTitle.innerText = category;
-    categoryEl.id = `${category}-section`;
-    categoryEl.insertAdjacentElement("beforeend", sectionTitle);
-    categoryEl.insertAdjacentElement("beforeend", renderItemsList(itemArr));
-    categories.push(categoryEl);
+    article.id = `${category}-section`;
+    article.insertAdjacentElement("beforeend", sectionTitle);
+    article.insertAdjacentElement("beforeend", renderItemsList(itemArr));
+    categories.push(article);
   }
 
   return categories;
