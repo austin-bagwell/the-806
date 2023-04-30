@@ -18,8 +18,6 @@ const foodieSectionTitle = [
   "Breakfasty",
 ];
 
-// TODO refactor
-// menu navigation
 subMenu.insertAdjacentHTML("beforeend", renderSubMenu(drinkSectionTitles));
 subMenu.addEventListener("click", (e) => {
   dynamicallyStyleSubMenu(e);
@@ -40,13 +38,6 @@ mainMenu.addEventListener("click", (e) => {
         renderSubMenu(foodieSectionTitle)
       );
 });
-
-function renderSubMenu(menu) {
-  const style = `class="pr-1rem sub-menu-link"`;
-  return menu
-    .map((item) => `<li ${style} ><a class="sub-menu-link">${item}</a></li>`)
-    .join("");
-}
 
 getMenu()
   .then((data) => renderMenu(data))
@@ -76,6 +67,7 @@ function renderMenu(menus) {
   }
 
   const main = document.querySelector(".main");
+
   sections.forEach((section) => {
     section.map((category) => {
       main.insertAdjacentElement("beforeend", category);
@@ -86,14 +78,19 @@ function renderMenu(menus) {
 function renderSection(menu) {
   const categories = [];
   for (let category of Object.keys(menu)) {
-    const itemArr = menu[category];
-    const article = document.createElement("article");
-    const sectionTitle = document.createElement("h2");
-    sectionTitle.innerText = category;
-    article.id = `${category}-section`;
-    article.insertAdjacentElement("beforeend", sectionTitle);
-    article.insertAdjacentElement("beforeend", renderItemsList(itemArr));
-    categories.push(article);
+    const categoryItems = menu[category];
+    const menuCategory = document.createElement("article");
+
+    const categoryTitle = document.createElement("h2");
+    categoryTitle.innerText = category;
+
+    menuCategory.id = `${category}-section`;
+    menuCategory.insertAdjacentElement("beforeend", categoryTitle);
+    menuCategory.insertAdjacentElement(
+      "beforeend",
+      renderItemsList(categoryItems)
+    );
+    categories.push(menuCategory);
   }
 
   return categories;
@@ -116,6 +113,14 @@ function renderMenuItem(menuItem) {
         <span>${description}</span>
         </li>`.trim();
   return html;
+}
+
+// MENU-SPECIFIC NAV
+function renderSubMenu(menu) {
+  const style = `class="pr-1rem sub-menu-link"`;
+  return menu
+    .map((item) => `<li ${style} ><a class="sub-menu-link">${item}</a></li>`)
+    .join("");
 }
 
 function dynamicallyStyleSubMenu(e) {
