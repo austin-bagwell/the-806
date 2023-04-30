@@ -61,43 +61,31 @@ async function getMenu() {
 }
 
 // FIXME
-// each menu section (drinks, foodies) needs a section parent element
-// within section parent are articles consisting of menu item categories/list of items
-// rough draft below, only renders drinks and does it sloppily
-// but the DOM structure is correct
+// how to pass in section title correctly? current way is HACKY big oof
+// still need to render the odds and ends - looseLeafTeas + flavors
 function renderMenu(menus) {
   const { drinks, foodies } = menus;
 
-  const sections = [];
-
-  const drinksSection = document.createElement("section");
-  const foodiesSection = document.createElement("section");
-
-  drinksSection.classList.add("margin-auto;");
-  drinksSection.id = "drinks-menu";
-  foodiesSection.classList.add("margin-auto;");
-
-  const renderedDrinks = renderSection(drinks);
-  renderedDrinks.forEach((category) =>
-    drinksSection.insertAdjacentElement("beforeend", category)
-  );
-  console.log("testing drinksSection:");
-  console.log(drinksSection);
-
-  // for (let menu of [drinks, foodies]) {
-  //   sections.push(renderSection(menu));
-  // }
+  const renderedMenuSections = [];
+  for (const section of [drinks, foodies]) {
+    const title = section.hasOwnProperty("coffees") ? "drinks" : "foodies";
+    renderedMenuSections.push(renderSection(section, title));
+  }
 
   const main = document.querySelector(".main");
-  main.insertAdjacentElement("beforeend", drinksSection);
-  // sections.forEach((section) => {
-  //   section.map((category) => {
-  //     main.insertAdjacentElement("beforeend", category);
-  //   });
-  // });
+
+  renderedMenuSections.forEach((section) =>
+    main.insertAdjacentElement("beforeend", section)
+  );
 }
 
-function renderSection(menu) {
+// FIXME
+// doing two things here - rendering section (big bite) and categories (smaller bites)
+function renderSection(menu, title) {
+  const section = document.createElement("section");
+  section.classList.add("margin-auto");
+  section.id = `${title}-menu`;
+
   const categories = [];
   for (let category of Object.keys(menu)) {
     const categoryItems = menu[category];
@@ -116,7 +104,9 @@ function renderSection(menu) {
     categories.push(menuCategory);
   }
 
-  return categories;
+  categories.forEach((cat) => section.insertAdjacentElement("beforeend", cat));
+
+  return section;
 }
 
 function renderItemsList(list) {
