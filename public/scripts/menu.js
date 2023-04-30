@@ -83,23 +83,20 @@ function renderMenu(menus) {
   });
 }
 
-function renderSection(section) {
-  console.log("here's what got passed in as section:");
-  console.log(section);
-
-  const renderedSections = [];
-  for (let category of Object.keys(section)) {
-    const itemArr = section[category];
-    const sectionEl = document.createElement("section");
+function renderSection(menu) {
+  const categories = [];
+  for (let category of Object.keys(menu)) {
+    const itemArr = menu[category];
+    const categoryEl = document.createElement("section");
     const sectionTitle = document.createElement("h2");
     sectionTitle.innerText = category;
-    sectionEl.id = `${category}-section`;
-    sectionEl.insertAdjacentElement("beforeend", sectionTitle);
-    sectionEl.insertAdjacentElement("beforeend", renderItemsList(itemArr));
-    renderedSections.push(sectionEl);
+    categoryEl.id = `${category}-section`;
+    categoryEl.insertAdjacentElement("beforeend", sectionTitle);
+    categoryEl.insertAdjacentElement("beforeend", renderItemsList(itemArr));
+    categories.push(categoryEl);
   }
 
-  return renderedSections;
+  return categories;
 }
 
 function renderItemsList(arr) {
