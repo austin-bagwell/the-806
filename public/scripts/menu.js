@@ -1,4 +1,3 @@
-const main = document.querySelector(".main");
 const mainMenu = document.querySelector("#main-menu");
 const subMenu = document.querySelector("#sub-menu");
 
@@ -129,6 +128,7 @@ function renderMenuItem(menuItem) {
 }
 
 // MENU-SPECIFIC NAV
+// FIXME need to map the display value to #href of the menu category
 function renderSubMenu(menu) {
   const style = `class="pr-1rem sub-menu-link"`;
   return menu
@@ -146,6 +146,7 @@ function dynamicallyStyleSubMenu(e) {
 
 // may need multiple error handlers? not totally sure
 function handleError(err) {
+  const main = document.querySelector(".main");
   const message = document.createElement("h3");
   message.style.textAlign = "center";
   message.innerText = err;
