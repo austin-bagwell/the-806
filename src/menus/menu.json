@@ -191,60 +191,62 @@
       }
     ]
   },
-  "syrupFlavors": {
-    "organic": ["vanilla", "hazelnut", "caramel", "rasberry"],
-    "allNatural": [
-      "irish cream",
-      "toffee nut",
-      "almond",
-      "cherry",
-      "pomegranate",
-      "blackberry",
-      "mandarin orange",
-      "kiwi",
-      "peach",
-      "green mint",
-      "strawberry"
-    ],
-    "sugarFree": ["vanilla", "caramel", "hazelnut"]
-  },
-  "looseLeafTeas": {
-    "black": [
-      "english breakfast",
-      "irish breakfast",
-      "earl grey",
-      "mango black",
-      "russian caravan",
-      "imperial gold oolong",
-      "vanilla black",
-      "blackberry",
-      "lychee congou",
-      "rose congou"
-    ],
-    "green": [
-      "gunpowder green",
-      "chun mee",
-      "japanese sencha",
-      "paradise green",
-      "china jasmine",
-      "genmaicha",
-      "moroccan mint",
-      "pomegranate green",
-      "sweet pear green",
-      "passionfruit kiwi",
-      "river mist"
-    ],
-    "red": ["rooibos", "african sunset", "mandarin rooibos"],
-    "herbal": [
-      "egyptian chamomile",
-      "lemon ginger",
-      "peppermint leaf",
-      "bruja blend [hibiscus]",
-      "tulsi ayurvedic detox",
-      "yerba maté",
-      "sunshine medley",
-      "sundown herbal"
-    ]
+  "misc": {
+    "syrupFlavors": {
+      "organic": ["vanilla", "hazelnut", "caramel", "rasberry"],
+      "allNatural": [
+        "irish cream",
+        "toffee nut",
+        "almond",
+        "cherry",
+        "pomegranate",
+        "blackberry",
+        "mandarin orange",
+        "kiwi",
+        "peach",
+        "green mint",
+        "strawberry"
+      ],
+      "sugarFree": ["vanilla", "caramel", "hazelnut"]
+    },
+    "looseLeafTeas": {
+      "black": [
+        "english breakfast",
+        "irish breakfast",
+        "earl grey",
+        "mango black",
+        "russian caravan",
+        "imperial gold oolong",
+        "vanilla black",
+        "blackberry",
+        "lychee congou",
+        "rose congou"
+      ],
+      "green": [
+        "gunpowder green",
+        "chun mee",
+        "japanese sencha",
+        "paradise green",
+        "china jasmine",
+        "genmaicha",
+        "moroccan mint",
+        "pomegranate green",
+        "sweet pear green",
+        "passionfruit kiwi",
+        "river mist"
+      ],
+      "red": ["rooibos", "african sunset", "mandarin rooibos"],
+      "herbal": [
+        "egyptian chamomile",
+        "lemon ginger",
+        "peppermint leaf",
+        "bruja blend [hibiscus]",
+        "tulsi ayurvedic detox",
+        "yerba maté",
+        "sunshine medley",
+        "sundown herbal"
+      ]
+    }
   },
   "foodies": {
     "pizzas": [
