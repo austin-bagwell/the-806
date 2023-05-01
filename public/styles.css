@@ -43,7 +43,7 @@ section:first-of-type {
 }
 
 section:not(:first-of-type) {
-  padding-top: 8rem;
+  padding-top: 5rem;
 }
 
 img {
@@ -108,23 +108,19 @@ input[type="date"]:valid:before {
 }
 
 /* || UTILITY */
-.mh-400px {
-  min-height: 400px;
-}
-
 .no-bullets {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
 .no-decoration {
   text-decoration: none;
 }
-
-/* .no-wrap {
-  word-break: break-all;
-} */
 
 .letter-spacing-wide {
   letter-spacing: 0.25rem;
@@ -144,6 +140,14 @@ input[type="date"]:valid:before {
 
 .font-color-white {
   color: var(--secondary-font-color);
+}
+
+.mh-2rem {
+  min-height: 2rem;
+}
+
+.mh-400px {
+  min-height: 400px;
 }
 
 .max-w-50 {
@@ -218,8 +222,16 @@ input[type="date"]:valid:before {
   left: -150px;
 }
 
-mb-1rem {
+.margin-auto {
+  margin: auto;
+}
+
+.mb-1rem {
   margin-bottom: 1rem;
+}
+
+.pb-half-rem {
+  padding-bottom: 0.5rem;
 }
 
 .pb-1rem {
@@ -232,6 +244,18 @@ mb-1rem {
 
 .pb-4rem {
   padding-bottom: 4rem;
+}
+
+.pr-1rem {
+  padding-right: 1rem;
+}
+
+.pr-2rem {
+  padding-right: 2rem;
+}
+
+.pr-4rem {
+  padding-right: 4rem;
 }
 
 .bg-blue {
@@ -285,6 +309,17 @@ mb-1rem {
   border-bottom: 1px solid var(--hover--blue-color);
 }
 
+.sub-menu-link {
+  color: darkgrey;
+}
+
+.sub-menu-link-active {
+  font-size: 1.25rem;
+  color: blanchedalmond;
+}
+
+/* MENU STYLING */
+
 /* BUTTONS */
 #giftcard-btn {
   min-width: 16rem;
@@ -297,21 +332,9 @@ mb-1rem {
 /* IMAGES */
 
 .img-wrap {
-  min-height: auto;
+  min-height: 450px;
   min-width: 400px;
-  max-width: 400px;
-}
-
-.img-offset-left {
-  position: relative;
-  top: -50px;
-  right: 80px;
-}
-
-.img-offset-right {
-  position: relative;
-  top: -50px;
-  right: -80px;
+  max-width: 450px;
 }
 
 #logo-main {
