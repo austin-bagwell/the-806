@@ -230,6 +230,10 @@ input[type="date"]:valid:before {
   margin-bottom: 1rem;
 }
 
+.pb-half-rem {
+  padding-bottom: 0.5rem;
+}
+
 .pb-1rem {
   padding-bottom: 1rem;
 }
@@ -313,6 +317,8 @@ input[type="date"]:valid:before {
   font-size: 1.25rem;
   color: blanchedalmond;
 }
+
+/* MENU STYLING */
 
 /* BUTTONS */
 #giftcard-btn {

@@ -92,7 +92,14 @@ function renderSection(menu, title) {
     menuCategory.classList.add(menuCategoryClassList);
 
     const categoryTitle = document.createElement("h2");
+    // FIXME
+    // styling like this is truly terrible
     categoryTitle.innerText = category;
+    categoryTitle.style.paddingBottom = "0.25rem";
+    categoryTitle.style.marginBottom = "0.5rem";
+    categoryTitle.style.fontSize = "4rem";
+    categoryTitle.style.letterSpacing = "0.25rem";
+    categoryTitle.style.borderBottom = "1px solid grey";
 
     menuCategory.id = `${category}-section`;
     menuCategory.insertAdjacentElement("beforeend", categoryTitle);
@@ -120,9 +127,9 @@ function renderItemsList(list) {
 
 function renderMenuItem(menuItem) {
   const { name, description } = menuItem;
-  const html = `<li class="no-bullets">
-        <span class="font-bold-md">${name}... </span>
-        <span>${description}</span>
+  const html = `<li class="no-bullets pb-half-rem">
+        <span class="font-bold-md font-size-lg">${name} ... </span>
+        <span class="font-size-md">${description}</span>
         </li>`.trim();
   return html;
 }
