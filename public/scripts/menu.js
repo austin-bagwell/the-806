@@ -82,7 +82,7 @@ function renderMenu(menus) {
 // doing two things here - rendering section (big bite) and categories (smaller bites)
 function renderSection(menu, title) {
   const section = document.createElement("section");
-  section.classList.add("margin-auto");
+  section.classList.add("menu-section");
   section.id = `${title}-menu`;
 
   const categories = [];

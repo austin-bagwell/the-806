@@ -271,6 +271,14 @@ input[type="date"]:valid:before {
 /*  */
 
 /* MENU */
+.main-menu-link {
+  color: var(--primary-font-color);
+  text-decoration: none;
+}
+
+.main-menu-link:active {
+  color: var(--secondary-font-color);
+}
 
 .menu-category-title {
   padding-bottom: 0.25rem;
