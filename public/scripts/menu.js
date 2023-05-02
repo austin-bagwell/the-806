@@ -92,14 +92,8 @@ function renderSection(menu, title) {
     menuCategory.classList.add(menuCategoryClassList);
 
     const categoryTitle = document.createElement("h2");
-    // FIXME
-    // styling like this is truly terrible
     categoryTitle.innerText = category;
-    categoryTitle.style.paddingBottom = "0.25rem";
-    categoryTitle.style.marginBottom = "0.5rem";
-    categoryTitle.style.fontSize = "4rem";
-    categoryTitle.style.letterSpacing = "0.25rem";
-    categoryTitle.style.borderBottom = "1px solid grey";
+    categoryTitle.classList.add("menu-category-title");
 
     menuCategory.id = `${category}-section`;
     menuCategory.insertAdjacentElement("beforeend", categoryTitle);
