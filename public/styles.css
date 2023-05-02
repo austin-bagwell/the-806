@@ -304,6 +304,12 @@ input[type="date"]:valid:before {
 
 /* || NAVIGATION */
 /*  */
+.stick-to-top {
+  position: sticky;
+  top: 150px;
+  left: auto;
+}
+
 .nav-desktop {
   padding: 2.5rem;
   padding-top: 1rem;
