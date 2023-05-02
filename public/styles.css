@@ -270,8 +270,25 @@ input[type="date"]:valid:before {
 /* || SITE SPECIFIC */
 /*  */
 
-/* COPYWRITING */
+/* MENU */
+.main-menu-link {
+  color: var(--primary-font-color);
+  text-decoration: none;
+}
 
+.main-menu-link:active {
+  color: var(--secondary-font-color);
+}
+
+.menu-category-title {
+  padding-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 4rem;
+  letter-spacing: 0.25rem;
+  border-bottom: 1px solid gray;
+}
+
+/* COPYWRITING */
 .section-heading {
   font-size: 48px;
 }
