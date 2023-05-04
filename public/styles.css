@@ -1,6 +1,7 @@
 /* || GENERAL STYLES */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -304,10 +305,23 @@ input[type="date"]:valid:before {
 
 /* || NAVIGATION */
 /*  */
+
+.menu-main {
+  padding-top: 16rem;
+}
+
+.sticky-menu-nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+}
+
 .stick-to-top {
-  position: sticky;
-  top: 150px;
-  left: auto;
+  position: fixed;
+  top: 100px;
+  width: 100%;
 }
 
 .nav-desktop {
